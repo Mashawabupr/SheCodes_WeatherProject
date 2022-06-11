@@ -1,0 +1,22 @@
+body{color:#7c7c7c;}
+.form-control{
+    margin-right:2px ;
+}
+svg{width:50px;}
+.today{width:130px;}
+.forjs{display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.gradusis{font-size:50px;
+    color:black
+
+}
+.fandc{
+    margin-bottom:40px;
+    margin-left: 10px;;
+}
+.whatWeather{display: flex;
+flex-direction: row;
+justify-content: space-between;
+}

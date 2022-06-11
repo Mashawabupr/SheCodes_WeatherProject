@@ -20,3 +20,10 @@ svg{width:50px;}
 flex-direction: row;
 justify-content: space-between;
 }
+.openSourceCode{margin-top:10px;
+    display: flex;
+    
+}
+.openSourceCode p{
+color:blue}
+.openSourceCode a{margin:0 5px;}

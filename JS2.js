@@ -58,15 +58,25 @@ function showWeather(response){
     document.querySelector("#farengeit").addEventListener("click",ffarengeit)
 }
 
-function func(event){
-      event.preventDefault()
-      let infoFromInput=document.querySelector("#city").value
+function search(city){
+      
       
       let apiKey="2610fc391e59a1d4c413f050d38f672d"
-      let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${infoFromInput}&units=metric&appid=${apiKey}`
+      let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`
       
       
-    axios.get(apiUrl).then(showWeather)
+    axios.get(apiUrl).then(showWeather)}
+search("Kyiv")
+
+
+
+
+function func(event){
+      event.preventDefault()
+      let inputCity =document.querySelector("#city").value
+    
+      search(inputCity)
+      
     
 }
 document.querySelector("#sity_search").addEventListener("click",func)

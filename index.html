@@ -14,15 +14,18 @@
 <body>
     <div class="all_in">
         <div class="container p-5 ">
+            
             <div class="row">
                 <div class="col-6 ">
+                    <form id="search-form">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search" id="city" >
+                        <input type="search" class="form-control" placeholder="Search" id="city" >
                         <div class="input-group-append" id="button-addon4">
-                        <button class="btn btn-primary" type="button" id = "sity_search">Search</button>
-                        <button class="btn btn-danger" type="button" id="searchCurrentPosition">Current</button>
+                        <input class="btn btn-primary" type="submit" value="Search" id = "sity_search"></input>
+                        <input class="btn btn-danger" type="submit" value="Current" id="searchCurrentPosition"></input>
                         </div>
                     </div>
+                    </form>
                     <div class="row pt-4">
                         <div class="col-6 ">
                             <h3 id="city_weather"></h3>

@@ -74,11 +74,12 @@ search("Kyiv")
 function func(event){
       event.preventDefault()
       let inputCity =document.querySelector("#city").value
-    
+ 
       search(inputCity)
       
     
 }
+
 document.querySelector("#sity_search").addEventListener("click",func)
 
 

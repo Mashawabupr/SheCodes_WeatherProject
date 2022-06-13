@@ -22,10 +22,21 @@ let days = [
   ];
 let all_time=`${days[day]} ${hour}:${minute}`
 document.querySelector("#now").innerHTML=all_time
+//FORECAST
+function forecast(){
+  let  forecast = document.querySelector("#forecast")
+  let divForecast=`<div class="col">day<br/><span>27</span></div>`
+  let i=1
+  while (i<7){
+  forecast.innerHTML+=divForecast
+  i+=1}
+}
+forecast()
 
 
 function showWeather(response){
   //data 
+  
 
   //city    
   document.querySelector("#city_weather").innerHTML=`${response.data.name} , ${response.data.sys.country}`
@@ -43,7 +54,7 @@ function showWeather(response){
   document.querySelector("#wind").innerHTML=`${Math.round(response.data.wind.speed)} km/h`
 
   document.querySelector("#today").setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
-
+  
 
   function fcelsius(event){
     event.preventDefault()
@@ -133,7 +144,7 @@ document.querySelector("#sity_search").addEventListener("click",func)
 
               
             }
- 
+           
       axios.get(apiUrl).then(weatherOutside)
 }
 }

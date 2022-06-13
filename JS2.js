@@ -37,10 +37,12 @@ function showWeather(response){
   document.querySelector("#whatIsTheWeather").innerHTML=response.data.weather[0].main
   
   //humidity
-  document.querySelector("#humidity").innerHTML=`Humidity: ${response.data.main.humidity}%`
+  document.querySelector("#humidity").innerHTML=` ${response.data.main.humidity}%`
 
   //wind
-  document.querySelector("#wind").innerHTML=`Wind: ${Math.round(response.data.wind.speed)} km/h`
+  document.querySelector("#wind").innerHTML=`${Math.round(response.data.wind.speed)} km/h`
+
+  document.querySelector("#today").setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
 
 
   function fcelsius(event){
@@ -66,7 +68,7 @@ function search(city){
       
       
     axios.get(apiUrl).then(showWeather)}
-search("Kyiv")
+search("Paris")
 
 
 
@@ -108,7 +110,7 @@ document.querySelector("#sity_search").addEventListener("click",func)
 
             //wind
               document.querySelector("#wind").innerHTML=`Wind: ${Math.round(response.data.wind.speed)} km/h`
-
+              document.querySelector("#today").setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
 
 
 

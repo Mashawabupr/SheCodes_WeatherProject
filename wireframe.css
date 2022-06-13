@@ -1,4 +1,4 @@
-body{color:#7c7c7c;
+body{color:gray;
 }
 .form-control{
     margin-right:2px ;
@@ -6,7 +6,8 @@ body{color:#7c7c7c;
 .container{width:800px;
     margin:50px auto;
     border-radius: 10px;
-    box-shadow: 5px 5px 25px #b6e5f0;
+    box-shadow: 10px 10px 30px #bbe2ec;
+    background-color: #e5f7fc;
     
 }
 
@@ -15,14 +16,16 @@ svg{width:50px;}
 .forjs{display: flex;
     flex-direction: row;
     align-items: center;
+    padding:0 10%;
 }
-.gradusis{font-size:50px;
-    color:black
+.gradusis{font-size:60px;
+    color:orange
 
 }
+
 .fandc{
     margin-bottom:40px;
-    margin-left: 10px;;
+    
 }
 .whatWeather{display: flex;
 flex-direction: row;
@@ -34,8 +37,7 @@ justify-content: space-between;
     text-align: center;
     font-size: 15px;
 }
-.openSourceCode p{
-color:#7747f1}
+
 .openSourceCode a{margin:0 5px;}
 .svgW{width: 110%;}
 .btn{padding:7px;
@@ -46,14 +48,11 @@ color:#7747f1}
     transition: 0.3s;}
 .primary:hover,.primary:active{background-color: #46c4e0;
     border-color: #46c4e0;}
-.danger{background-color:#885df1;
-    border-color: #885df1;
+.danger{background-color:orange;;
+    border-color: orange;;
     transition: 0.3s;}
-.danger:hover,.danger:active{background-color:#7747f1;
-    border-color: #7747f1;}
+h2,h5,span{color: orange;}
+.danger:hover,.danger:active{background-color:rgb(230, 156, 21);
+    border-color: rgb(230,156,21);}
 .btn:hover,.btn:active{color:white}
-a{color:#46c4e0}
-/*.purple{color:#7747f1;font-weight: bold;
-}
-.wisperi{color:#46c4e0;
-}*/
+

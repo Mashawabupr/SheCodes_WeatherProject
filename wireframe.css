@@ -1,7 +1,15 @@
-body{color:#7c7c7c;}
+body{color:#7c7c7c;
+}
 .form-control{
     margin-right:2px ;
 }
+.container{width:800px;
+    margin:50px auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 25px #b6e5f0;
+    
+}
+
 svg{width:50px;}
 .today{width:130px;}
 .forjs{display: flex;
@@ -20,10 +28,32 @@ svg{width:50px;}
 flex-direction: row;
 justify-content: space-between;
 }
-.openSourceCode{margin-top:10px;
+.openSourceCode{margin-top:20px;
     display: flex;
-    
+    justify-content: center;
+    text-align: center;
+    font-size: 15px;
 }
 .openSourceCode p{
-color:blue}
+color:#7747f1}
 .openSourceCode a{margin:0 5px;}
+.svgW{width: 110%;}
+.btn{padding:7px;
+    color:white;border-radius: 10px;}
+.primary{margin-left:5px;
+    background-color:#68e1fd;
+    border-color:#68e1fd;
+    transition: 0.3s;}
+.primary:hover,.primary:active{background-color: #46c4e0;
+    border-color: #46c4e0;}
+.danger{background-color:#885df1;
+    border-color: #885df1;
+    transition: 0.3s;}
+.danger:hover,.danger:active{background-color:#7747f1;
+    border-color: #7747f1;}
+.btn:hover,.btn:active{color:white}
+a{color:#46c4e0}
+/*.purple{color:#7747f1;font-weight: bold;
+}
+.wisperi{color:#46c4e0;
+}*/

@@ -12,30 +12,32 @@
    
 </head>
 <body>
-    <div class="all_in">
-        <div class="container p-5 ">
+    
+        <div class="container p-4" >
             
-            <div class="row">
-                <div class="col-6 ">
+            <div class="all_in">
+                <div class="col-12 ">
+                    <div class="row">
                     <form id="search-form">
                     <div class="input-group">
                         <input type="search" autocomplete="off"
                         autofocus="on" class="form-control" placeholder="Search" id="city" >
                         <div class="input-group-append" id="button-addon4">
-                        <input class="btn btn-primary"   
+                        <input class="btn primary" 
+
                         type="submit" value="Search" id = "sity_search"></input>
-                        <input class="btn btn-danger" type="submit" value="Current" id="searchCurrentPosition"></input>
+                        <input class="btn danger" type="submit" value="Current" id="searchCurrentPosition"></input>
                         </div>
                     </div>
                     </form>
                     <div class="row pt-4">
                         <div class="col-6 ">
-                            <h3 id="city_weather"></h3>
-                            <p id="now"></p>
+                            <h3 id="city_weather" class="purple"></h3>
+                            <p id="now" class="purple"></p>
                             <div class="whatWeather">
-                                <p id="whatIsTheWeather"></p>
-                                <p id ="humidity"></p>
-                                <p id="wind"></p>
+                                <p id="whatIsTheWeather" class="wisperi"></p>
+                                <p id ="humidity" class="wisperi"></p>
+                                <p id="wind" ></p>
                             </div>
                              <div class="forjs">
                                   
@@ -50,9 +52,7 @@
                         </div>
                     
                         <div class="col-6" >
-                            <p>Night 21C <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="_19q0 _3C_G"><g fill="none"><path fill="#315EFB" d="M11.6 16a.498.498 0 01.693-.138l.416.277a.5.5 0 01.14.693L11.401 19a.5.5 0 01-.693.139l-.416-.277a.5.5 0 01-.139-.694zm-3-1a.498.498 0 01.693-.138l.416.277a.5.5 0 01.14.693L8.401 18a.5.5 0 01-.693.139l-.416-.277a.5.5 0 01-.139-.694z"></path><path fill="#FFC000" d="M11 1c.481 0 .976.057 1.477.178 2.19.527 3.93 2.328 4.388 4.532.17.809.166 1.594.036 2.335a3.467 3.467 0 00-1.408-.873 4.847 4.847 0 00-.096-1.156c-.322-1.547-1.52-2.848-3.02-3.311a7.014 7.014 0 011.097 4.228 4.187 4.187 0 00-1.36-1.35c-.073-.043-.15-.077-.226-.117a5.495 5.495 0 00-2.233-3.464c-.358-.251-.216-.812.213-.895C10.234 1.037 10.613 1 11 1z"></path><path fill="#315EFB" d="M10.026 5c.751 0 1.5.199 2.16.602a4.21 4.21 0 011.468 1.515l.003.002h.001l.209-.047c.209-.043.42-.069.633-.069 1.057 0 2.115.477 2.822 1.431a3.49 3.49 0 010 4.134A3.49 3.49 0 0114.5 14H5.014c-1.024 0-2.047-.522-2.638-1.565a2.917 2.917 0 010-2.867c.591-1.044 1.614-1.566 2.638-1.566.435 0 .867.1 1.267.293a.502.502 0 01.16.781l-.34.386a.5.5 0 01-.547.14c-.17-.066-.353-.1-.54-.1-.152 0-.308.022-.464.069a1.505 1.505 0 00-.392 2.661c.258.183.573.269.89.269h9.447c.902 0 1.711-.597 1.935-1.471a2.003 2.003 0 00-1.93-2.528c-.109 0-.214.015-.318.032-.48.078-.899.326-1.2.682a.137.137 0 01-.107.051.136.136 0 01-.139-.129 2.818 2.818 0 00-.43-1.337 2.69 2.69 0 00-.78-.841 2.63 2.63 0 00-1.474-.432c-.297 0-.595.045-.879.133-.612.188-1.029.509-1.323.893a.497.497 0 01-.663.113 3.959 3.959 0 00-.395-.227.497.497 0 01-.177-.739 4.152 4.152 0 011.37-1.181A4.269 4.269 0 0110.026 5z"></path></g></svg></p>
-                            <p>Morning 25C<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="_19q0 _3C_G"><path d="M10.026 5c.751 0 1.5.199 2.16.602a4.21 4.21 0 011.468 1.515l.003.002h.001l.209-.047c.209-.043.42-.069.633-.069 1.057 0 2.115.477 2.822 1.431a3.49 3.49 0 010 4.134A3.49 3.49 0 0114.5 14H5.014c-1.024 0-2.047-.522-2.638-1.565a2.917 2.917 0 010-2.867c.591-1.044 1.614-1.566 2.638-1.566.435 0 .867.1 1.267.293a.502.502 0 01.16.781l-.34.386a.5.5 0 01-.547.14c-.17-.066-.353-.1-.54-.1-.152 0-.308.022-.464.069a1.505 1.505 0 00-.392 2.661c.258.183.573.269.89.269h9.447c.902 0 1.711-.597 1.935-1.471a2.003 2.003 0 00-1.93-2.528c-.109 0-.214.015-.318.032-.48.078-.899.326-1.2.682a.137.137 0 01-.107.051.136.136 0 01-.139-.129 2.818 2.818 0 00-.43-1.337 2.69 2.69 0 00-.78-.841 2.63 2.63 0 00-1.474-.432c-.297 0-.595.045-.879.133-.612.188-1.029.509-1.323.893a.497.497 0 01-.663.113 3.959 3.959 0 00-.395-.227.497.497 0 01-.177-.739 4.152 4.152 0 011.37-1.181A4.269 4.269 0 0110.026 5z" fill="#315EFB"></path></svg></p>
-                            <p>Evening 24C <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="_19q0 _3C_G"><path d="M10.026 5c.751 0 1.5.199 2.16.602a4.21 4.21 0 011.468 1.515l.003.002h.001l.209-.047c.209-.043.42-.069.633-.069 1.057 0 2.115.477 2.822 1.431a3.49 3.49 0 010 4.134A3.49 3.49 0 0114.5 14H5.014c-1.024 0-2.047-.522-2.638-1.565a2.917 2.917 0 010-2.867c.591-1.044 1.614-1.566 2.638-1.566.435 0 .867.1 1.267.293a.502.502 0 01.16.781l-.34.386a.5.5 0 01-.547.14c-.17-.066-.353-.1-.54-.1-.152 0-.308.022-.464.069a1.505 1.505 0 00-.392 2.661c.258.183.573.269.89.269h9.447c.902 0 1.711-.597 1.935-1.471a2.003 2.003 0 00-1.93-2.528c-.109 0-.214.015-.318.032-.48.078-.899.326-1.2.682a.137.137 0 01-.107.051.136.136 0 01-.139-.129 2.818 2.818 0 00-.43-1.337 2.69 2.69 0 00-.78-.841 2.63 2.63 0 00-1.474-.432c-.297 0-.595.045-.879.133-.612.188-1.029.509-1.323.893a.497.497 0 01-.663.113 3.959 3.959 0 00-.395-.227.497.497 0 01-.177-.739 4.152 4.152 0 011.37-1.181A4.269 4.269 0 0110.026 5z" fill="#315EFB"></path></svg></p>
+                            <img class="svgW" src="photos\Weather_Isometric.svg">
                         </div>
                         
                     </div>
@@ -60,26 +60,28 @@
                
             </div>
             
-            <div class="row">
-                <div class="col-6 ">
+            
+                <div class="col-12 ">
                     <div class="row">
-                        <div class="col">Tuesday <br/>7 June<br/>30C</div>
-                        <div class="col"> Wednesday <br/>8 June<br/>27C</div>
-                        <div class="col">Thursday <br/>9 June<br/>28C</div>
-                        <div class="col">Friday<br/> 10 June<br/>25C</div>
-                        <div class="col">Saturday<br/> 11 June<br/>23C</div>
-                        <div class="col">Sunday <br/>12 June<br/>23</div>
+                    <div class="row purple">
+                        <div class="col">Tuesday <br/>30C</div>
+                        <div class="col"> Wednesday <br/>27C</div>
+                        <div class="col">Thursday <br/>28C</div>
+                        <div class="col">Friday<br/>25C</div>
+                        <div class="col">Saturday<br/>23C</div>
+                        <div class="col">Sunday <br/>23</div>
+                    </div>
+
+                    <div class="openSourceCode">
+                        <p>This project was coded by <a href="https://github.com/Mashawabupr" target="_blank"> Mari Kvirkviya</a> and is <br/><a href="https://github.com/Mashawabupr/SheCodes_WeatherProject"  target="_blank">open-sourced on GitHub</a>  and <a href="https://earnest-creponne-7f3cd9.netlify.app/" target="_blank">hosted on Netlify</a></p>
+                        
                     </div>
                 </div>
                 
             </div>
             
        
-            <div class="openSourceCode">
-                <a href="https://github.com/Mashawabupr/SheCodes_WeatherProject"  target="_blank">Open-source code</a>
-                <p>by </p>
-                <a href="https://github.com/Mashawabupr" target="_blank"> Mari Kvirkviya</a>
-            </div>
+           
         
         </div>
 

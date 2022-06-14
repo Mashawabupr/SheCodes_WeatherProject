@@ -23,22 +23,61 @@ let days = [
 let all_time=`${days[day]} ${hour}:${minute}`
 document.querySelector("#now").innerHTML=all_time
 //FORECAST
-function forecast(response){
-  console.log(response.data.daily)
-  let  forecast = document.querySelector("#forecast")
-  let divForecast=`<div class="col">day<br/><span>27</span></div>`
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
 }
 
+function displayForecast(response) {
+  let forecast = response.data.daily;
+
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  console.log(forecast)
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `
+      <div class="col-2 colCenter">
+        <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
+        <img
+          src="http://openweathermap.org/img/wn/${
+            forecastDay.weather[0].icon
+          }@2x.png"
+          alt=""
+          width="42"
+        />
+        <div class="weather-forecast-temperatures">
+          <span class="weather-forecast-temperature-max"> ${Math.round(
+            forecastDay.temp.max
+          )}° </span>
+          <span class="weather-forecast-temperature-min"> ${Math.round(
+            forecastDay.temp.min
+          )}° </span>
+        </div>
+      </div>
+  `;
+    }
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 
 function searchByCoord(coordenants){
   let apiKey="2610fc391e59a1d4c413f050d38f672d"
-  let apiUrl2=`https://api.openweathermap.org/data/2.5/onecall?lat=${coordenants.lat}&lon=${coordenants.lon}&unit=metric&appid=${apiKey}`
+  let apiUrl2=`https://api.openweathermap.org/data/2.5/onecall?lat=${coordenants.lat}&lon=${coordenants.lon}&units=metric&appid=${apiKey}`
  
-  axios.get(apiUrl2).then(forecast)
+  axios.get(apiUrl2).then(displayForecast)
 }
 
 
-function showWeather(response){
+function showWeather(response){searchByCoord(response.data.coord)
   //data 
   searchByCoord(response.data.coord)
 

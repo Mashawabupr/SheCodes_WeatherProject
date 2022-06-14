@@ -3,6 +3,7 @@ body{color:gray;
 .form-control{
     margin-right:2px ;
 }
+.colCenter{text-align: center;}
 .container{width:800px;
     margin:50px auto;
     border-radius: 10px;

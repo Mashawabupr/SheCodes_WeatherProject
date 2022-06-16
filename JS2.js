@@ -1,4 +1,4 @@
-//challenge1 
+
 let info=new Date()
 let day=info.getDay()
 let hour=info.getHours()
@@ -22,7 +22,7 @@ let days = [
   ];
 let all_time=`${days[day]} ${hour}:${minute}`
 document.querySelector("#now").innerHTML=all_time
-//FORECAST
+
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
@@ -123,23 +123,13 @@ function search(city){
       
     axios.get(apiUrl).then(showWeather)}
 search("Paris")
-
-
-
-
 function func(event){
       event.preventDefault()
       let inputCity =document.querySelector("#city").value
  
       search(inputCity)
-      
-    
 }
-
 document.querySelector("#sity_search").addEventListener("click",func)
-
-
-    // CURRENT
     document.querySelector("#searchCurrentPosition").addEventListener("click",func2)
 
     function func2(event){
@@ -165,27 +155,19 @@ document.querySelector("#sity_search").addEventListener("click",func)
             //wind
               document.querySelector("#wind").innerHTML=`Wind: ${Math.round(response.data.wind.speed)} km/h`
               document.querySelector("#today").setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
-
-
-
-              function fcelsius(event){
+      function fcelsius(event){
                 event.preventDefault()
                 document.querySelector("#gradus").innerHTML=Math.round(response.data.main.temp)
             
               }
-            
                 document.querySelector("#celsius").addEventListener("click",fcelsius)
             
               function ffarengeit(event){
                 event.preventDefault()
                document.querySelector("#gradus").innerHTML=Math.round(response.data.main.temp*1.8+32)
               }
-              
-            
                document.querySelector("#farengeit").addEventListener("click",ffarengeit)
             
-
-              
             }
            
       axios.get(apiUrl).then(weatherOutside)

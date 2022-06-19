@@ -1,3 +1,16 @@
+:root {
+  --colorOfSun: orange;
+  --colorOfSea: #68e1fd;
+}
+.primary,
+.danger {
+  border: none;
+  color: white;
+  transition: 0.3s;
+  margin-left: 5px;
+  padding: 7px;
+  border-radius: 10px;
+}
 body {
   color: gray;
 }
@@ -41,10 +54,13 @@ svg {
 }
 .gradusis {
   font-size: 60px;
-  color: orange;
+  color: var(--colorOfSun);
 }
+h2,
+h5,
+span,
 .temp {
-  color: orange;
+  color: var(--colorOfSun);
 }
 .fandc {
   margin-bottom: 40px;
@@ -61,18 +77,13 @@ svg {
   text-align: center;
   font-size: 15px;
 }
-
 .openSourceCode a {
   margin: 0 5px;
 }
 .svgW {
   width: 110%;
 }
-.btn {
-  padding: 7px;
-  color: white;
-  border-radius: 10px;
-}
+
 .primary {
   margin-left: 5px;
   background-color: #68e1fd;
@@ -85,21 +96,13 @@ svg {
   border-color: #46c4e0;
 }
 .danger {
-  background-color: orange;
-  border-color: orange;
+  background-color: var(--colorOfSun);
+  border-color: var(--colorOfSun);
   transition: 0.3s;
 }
-h2,
-h5,
-span {
-  color: orange;
-}
+
 .danger:hover,
 .danger:active {
   background-color: rgb(230, 156, 21);
   border-color: rgb(230, 156, 21);
-}
-.btn:hover,
-.btn:active {
-  color: white;
 }

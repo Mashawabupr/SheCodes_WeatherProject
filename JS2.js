@@ -25,7 +25,7 @@ function Forecast(response) {
   let fdays = response.data.daily;
   let forecastElement = "";
   forecastElement += `<div class="row">`;
-
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   fdays.forEach(function (day, index) {
     console.log(day);
     if (index < 7 && index > 0) {

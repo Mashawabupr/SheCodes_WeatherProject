@@ -12,7 +12,7 @@
   border-radius: 10px;
   font-size: 17px;
 }
-.noUnderline {
+a {
   text-decoration: none;
 }
 body {
